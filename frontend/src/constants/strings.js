@@ -3,7 +3,7 @@
 export const APP_STRINGS = {
   BRAND: {
     NAME_INITIALS: "SGEH",
-    FULL_NAME: "Shri Gajanan Electricals",
+    FULL_NAME: "Shri Gajanan Electricals & Hardware",
     SUB_TEXT: "Electricals & Hardware",
     VERSION: "v1.0.0",
     MODE: "Admin Mode",
