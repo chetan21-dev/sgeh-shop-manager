@@ -32,7 +32,7 @@ export const App = () => {
   
   if (!isAuthenticated) {
       return <Login onLoginSuccess={handleLoginSuccess} />;
-    }
+  }
 
   return (
     <div className="flex h-screen bg-gray-100 font-sans overflow-hidden">
