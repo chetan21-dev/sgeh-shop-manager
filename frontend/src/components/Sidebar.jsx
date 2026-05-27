@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { LayoutDashboard, Package, Wrench } from 'lucide-react';
+import { LayoutDashboard, Package, Wrench,LogOut } from 'lucide-react';
 import { APP_STRINGS } from '../constants/strings';
 
-export default function Sidebar({ activeTab, setActiveTab }) {
+export default function Sidebar({ activeTab, setActiveTab,onLogout }) {
     const {BRAND,TABS} = APP_STRINGS
   return (
     <aside className="w-64 bg-slate-900 text-white flex flex-col justify-between h-screen sticky top-0">
@@ -36,9 +36,21 @@ export default function Sidebar({ activeTab, setActiveTab }) {
         </nav>
       </div>
       
-      <div className="p-4 border-t border-slate-800 text-center text-xs text-slate-500">
-        {BRAND.VERSION}
-      </div>
+      {/* BOTTOM SECTION: ADMIN DETAILS & ACTION LOGOUT BUTTON */}
+        <div className="p-4 border-t border-slate-800 space-y-3 bg-slate-950/40">
+          <div className="text-center text-[11px] text-slate-500 font-medium">
+            {BRAND.VERSION} • {BRAND.MODE}
+          </div>
+          
+          {/* LOGOUT INTERACTIVE ACTION BUTTON */}
+          <button 
+            onClick={onLogout}
+            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-rose-600/10 hover:bg-rose-600 text-rose-400 hover:text-white border border-rose-500/20 hover:border-transparent transition-all"
+          >
+            <LogOut size={16} />
+            {BRAND.LOGOUT}
+          </button>
+        </div>
     </aside>
   );
 }
