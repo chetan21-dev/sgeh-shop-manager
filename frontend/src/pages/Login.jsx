@@ -6,7 +6,8 @@ import { APP_STRINGS } from '../constants/strings';
 
 export default function Login({ onLoginSuccess }) {
   const { BRAND, LOGIN } = APP_STRINGS;
-  
+  const {VITE_USERNAME,VITE_PASSWORD} = import.meta.env
+
   // Local state for form inputs
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -16,8 +17,7 @@ export default function Login({ onLoginSuccess }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Hardcoded check for frontend testing (We will connect this to Node.js/MongoDB later!)
-    if (username === 'admin' && password === 'gajanan123') {
+    if (username === VITE_USERNAME && password === VITE_PASSWORD) {
       setErrorMessage('');
       onLoginSuccess(); // Trigger authentication state update in App.jsx
     } else {
