@@ -32,6 +32,15 @@ export const APP_STRINGS = {
     DESCRIPTION: "This is where you can add electrical accessories, edit prices, and look up stock details."
   },
 
+  INVENTORY_VIEWS: {
+    GRID: "Grid View",
+    LIST: "List View",
+    OUT_OF_STOCK: "Out of Stock",
+    LOW_STOCK: "Low Stock Warning",
+    BUYING_PRICE: "Cost:",
+    SELLING_PRICE: "Selling Price:"
+  },
+
   REPAIRS: {
     TITLE: "Repair Tracker",
     DESCRIPTION: "Log new repair items (mixers, fans, motors) and keep tabs on payments and completion dates."
@@ -60,5 +69,8 @@ export const APP_STRINGS = {
     CLOSE_BTN: "Cancel"
 },
   CATEGORIES: ["Electrical", "Hardware", "Stationary"],
-  UNITS: ["pcs", "box", "meter", "bundle", "kg", "packet"]
+  UNITS: ["pcs", "box", "meter", "bundle", "kg", "packet"],
+  IMAGE_LABEL: "Product Image",
+  IMAGE_PLACEHOLDER: "Click to upload product image",
+  IMAGE_REMOVE: "Remove Image"
 };
